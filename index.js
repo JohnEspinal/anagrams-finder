@@ -1,17 +1,24 @@
 const fs = require('fs');
 const readline = require('readline');
 
-async function prtct() 
+async function prtxt() 
 {
     let lines = [];
 
-    const rl = readline.createInterface({input: fs.createReadStream('student.txt'), crlDelay: Infinity});
+    const rl = readline.createInterface({
+    input: fs.createReadStream('wordlist.txt'), 
+    crlDelay: Infinity
 
-    for await (const line of rl){lines.push(line);
+    });
+
+    for await (const line of rl){
+        lines.push(line);
     }
     return lines;
 
 }
+
+
 const findAnagrams = (stringArr)=>{
     var anagrams = {};
     for (let index = 0; index < stringArr.length; index++) {
@@ -40,6 +47,13 @@ const findAnagrams = (stringArr)=>{
 
 }
 
+const Main = async () =>{
+    const input = await prtxt();
+    const output = await findAnagrams(input);
+    console.log(output);
+}
+
+Main();
 
 
 module.exports = findAnagrams
