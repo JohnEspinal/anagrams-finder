@@ -21,3 +21,15 @@ test('test_3', () => {
   let expected = [['Casa','SaaC'], ['azul', 'zula'],['Hogar','Rogah'],['iaucdd','ciudad']];
   expect(findAnagrams(["Casa","SaaC","azul","zula" ,"Hogar", "Rogah",'iaucdd',"ciudad"])).toStrictEqual(expected);
 });
+
+test('test_4', () => {
+  
+  let expected = [['Casa','SaaC'], ['azul', 'zula'],['Hogar','Rogah'],['iaucdd','ciudad','diucda','cuidda']];
+  expect(findAnagrams(["Casa","SaaC","azul","zula" ,"Hogar", "Rogah",'iaucdd',"ciudad",'diucda','cuidda'])).toStrictEqual(expected);
+});
+test('test_5', () => {
+  
+  let expected = [['Casa','SaaC'], ['azul', 'zula'],['Hogar','Rogah'],['iaucdd','ciudad','diucda','cuidda']];
+  expect(findAnagrams(["Casa","SaaC","azul","zula" ,"Hogar", "Rogah",'iaucdd',"ciudad",'diucda','cuidda','cuidda'])).toStrictEqual(expected);
+});
+
