@@ -16,3 +16,8 @@ test('test_2', () => {
   expect(findAnagrams(["Casa","SaaC" ,"Hogar", "Rogah", "Ciudad"])).toStrictEqual(expected);
 });
 
+test('test_3', () => {
+  
+  let expected = [['Casa','SaaC'], ['azul', 'zula'],['Hogar','Rogah'],['iaucdd','ciudad']];
+  expect(findAnagrams(["Casa","SaaC","azul","zula" ,"Hogar", "Rogah",'iaucdd',"ciudad"])).toStrictEqual(expected);
+});
